@@ -130,9 +130,9 @@ name|类型|默认值|必须|说明
 
 默认情况下，打包将自动在根目录生成埋点报告：
 
-`report-detailed.json` ：埋点详细数据
+ - `report-detailed.json` ：埋点详细数据
 
-`report-simple.json` ：埋点一览（不包括忽略处）
+ - `report-simple.json` ：埋点一览（不包括忽略处）
 
 你可以适配埋点报告导入埋点系统，完善埋点一体化流水线。
 

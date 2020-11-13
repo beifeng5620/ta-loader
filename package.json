@@ -5,11 +5,10 @@
   "homepage": "https://github.com/fz6m/ta-loader",
   "author": "fz6m",
   "keywords": [
-    "ta",
+    "event-tracker",
+    "event-tracking",
     "ta-loader",
-    "app-click",
-    "webpack-loader",
-    "webpack-ta-loader"
+    "app-click"
   ],
   "files": [
     "src"

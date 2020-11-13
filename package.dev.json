@@ -1,0 +1,35 @@
+{
+  "name": "ta-loader",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "homepage": "https://github.com/fz6m/ta-loader",
+  "author": "fz6m",
+  "keywords": [
+    "ta",
+    "ta-loader",
+    "app-click",
+    "webpack-loader",
+    "webpack-ta-loader"
+  ],
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "test": "webpack --mode production",
+    "test:prod": "cross-env NODE_ENV=production webpacl --mode production",
+    "format": "prettier --write \"src/**/*.js\""
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "babel-loader": "^8.2.1",
+    "clean-webpack-plugin": "^3.0.0",
+    "cross-env": "^7.0.2",
+    "eslint": "^7.12.0",
+    "eslint-config-prettier": "^6.14.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "prettier": "^2.1.2",
+    "webpack": "4.44.2",
+    "webpack-cli": "^4.2.0"
+  },
+  "license": "MIT"
+}

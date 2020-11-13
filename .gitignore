@@ -1,2 +1,4 @@
 /node_modules
 /dist
+/report-detailed.json
+/report-simple.json

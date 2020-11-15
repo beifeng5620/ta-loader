@@ -28,7 +28,7 @@
           },
           // 在 babel-loader 之前加载（自下而上）
           {
-            loader: './src/index.js'
+            loader: 'ta-loader'
           }
         ]
       }

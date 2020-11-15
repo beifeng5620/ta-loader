@@ -88,5 +88,7 @@ module.exports = function (source, map, meta) {
 
   report && generateReport(local.resolved)
 
-  return core.transformFromAstSync(ast).code
+  return core.transformFromAstSync(ast, null, {
+    configFile: false
+  }).code
 }

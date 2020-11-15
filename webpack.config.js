@@ -25,16 +25,13 @@ module.exports = {
         exclude: /node_modules/,
         use: [
           {
+            loader: 'babel-loader'
+          },
+          {
             loader: './src/index.js',
             options: {}
           }
         ]
-      },
-      {
-        test: /\.js$/,
-        loader: 'babel-loader',
-        include: resolve(srcBasePath),
-        exclude: /node_modules/
       }
     ]
   },

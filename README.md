@@ -1,6 +1,6 @@
 # ta-loader
 
-*version: 1.0*
+*version: 1.1.0*
 
 基于 webpack 的埋点自动化方案：注释即埋点。开发环境零干扰，自动生成报告，省略单项可配置。
 
@@ -19,16 +19,18 @@
 ```js
   module: {
     rules: [
-      // 需要在 babel-loader 之前引用
       {
         test: /\.js$/,
-        loader: 'ta-loader',
-        exclude: /node_modules/
-      },
-      {
-        test: /\.js$/,
-        loader: 'babel-loader',
-        exclude: /node_modules/
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'babel-loader'
+          },
+          // 在 babel-loader 之前加载（自下而上）
+          {
+            loader: './src/index.js'
+          }
+        ]
       }
     ]
   }
@@ -51,6 +53,26 @@
 ```
 
 即可在打包时自动完成埋点方法注入。
+
+#### Vue
+
+在 `vue.config.js` 内配置：
+
+```js
+module.exports = {
+  chainWebpack(config) {
+    config.module
+      .rule('js')
+      .test(/\.js$/)
+      .use('ta-loader')
+      .loader('ta-loader')
+      .options({
+        // ...
+      })
+      .end()
+  }
+}
+```
 
 ### 埋点方式
 
